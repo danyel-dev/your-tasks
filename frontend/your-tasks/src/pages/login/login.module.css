@@ -1,0 +1,58 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+} 
+
+h1 {
+    color: rgba(0, 0, 0, .8);
+    font-size: 1.8em;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+input {
+    padding: 8px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
+button {
+    width: max-content;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 2px;
+    background-color: rgb(31, 146, 31);
+    color: white;
+    border: 0;
+    font-weight: bold;
+}
+
+
+@media(max-width: 350px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    } 
+}
