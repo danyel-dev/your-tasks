@@ -7,7 +7,6 @@ export default function Login() {
             <h1>Your Tasks</h1>
             
             <form className={styles.form}>
-                
                 <div>
                     <label htmlFor="">Nome de usuário</label>
                     <input type="text" />
@@ -20,6 +19,8 @@ export default function Login() {
                 
                 <button>Entrar</button>
             </form>
+
+            <a href='google.com'>Ainda não possui uma conta? Clique aqui e crie uma!</a>
         </main>
     )
 }
