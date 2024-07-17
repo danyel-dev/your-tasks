@@ -1,4 +1,5 @@
 import styles from './home.module.css'
+import CreateNewListComponent from './Components/CreateNewListComponent';
 
 
 export default function Home() {
@@ -7,9 +8,7 @@ export default function Home() {
             <aside className={styles.aside}></aside>
 
             <main className={styles.main}>
-                <div className={styles.createListContainer}>
-                    <button className={styles.createListButton}>Nova Lista de Tarefas</button>
-                </div>
+                <CreateNewListComponent />
             </main>
         </div>
     );

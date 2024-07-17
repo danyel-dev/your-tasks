@@ -1,0 +1,32 @@
+.createListContainer {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.ListCreationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formFieldLabel {
+    font-size: 14px;
+}
+
+.createListButton {
+    width: max-content;
+}
+
+.smallOptional {
+    color: rgba(0, 0, 0, .7);
+}
