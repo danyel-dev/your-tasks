@@ -1,5 +1,11 @@
 from rest_framework import serializers
-from .models import Task
+from .models import Task, List
+
+
+class ListSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = List
+        fields = ['id', 'url', 'user', 'title', 'description', 'created_at', 'updated_at']
 
 
 class TaskSerializer(serializers.HyperlinkedModelSerializer):

@@ -1,7 +1,12 @@
-from .models import Task
 from rest_framework import permissions, viewsets
 
-from .serializers import TaskSerializer
+from .models import Task, List
+from .serializers import TaskSerializer, ListSerializer
+
+
+class ListViewSet(viewsets.ModelViewSet):
+    queryset = List.objects.all()
+    serializer_class = ListSerializer
 
 
 class TaskViewSet(viewsets.ModelViewSet):
