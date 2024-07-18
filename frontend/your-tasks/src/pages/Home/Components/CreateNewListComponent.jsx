@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './createNewList.module.css'
+import axios from 'axios';
 
 
 export default function CreateNewListComponent() {
@@ -14,7 +15,11 @@ export default function CreateNewListComponent() {
     function handleSubmitForm(e) {
         e.preventDefault()
 
-        console.log(title, description)
+        axios.post("http://127.0.0.1:8000/lists/", {
+            user: "http://127.0.0.1:8000/users/2/",
+            title: title,
+            description: description
+        }).then(response => console.log(response.data))
         
         setTitle("")
         setDescription("")
