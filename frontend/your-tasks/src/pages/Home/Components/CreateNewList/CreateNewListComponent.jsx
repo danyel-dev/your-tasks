@@ -49,7 +49,7 @@ export default function CreateNewListComponent() {
                             Descrição <small className={styles.smallOptional}>(Opcional)</small>
                         </label>
 
-                        <textarea name='description' cols="30" rows="10" id='description' value={description} onChange={handleChangeDescriptionField}></textarea>
+                        <textarea name='description' cols="30" rows="5" id='description' value={description} onChange={handleChangeDescriptionField}></textarea>
                     </div>
 
                     <button className={styles.buttonSubmitForm} onClick={handleSubmitForm}>Criar Lista</button>

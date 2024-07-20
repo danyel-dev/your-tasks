@@ -1,5 +1,6 @@
 import styles from './home.module.css'
-import CreateNewListComponent from './Components/CreateNewListComponent';
+import CreateNewListComponent from './Components/CreateNewList/CreateNewListComponent';
+import ListTasks from './Components/ListTasks/ListTasks';
 
 
 export default function Home() {
@@ -9,6 +10,8 @@ export default function Home() {
 
             <main className={styles.main}>
                 <CreateNewListComponent />
+
+                <ListTasks />
             </main>
         </div>
     );
