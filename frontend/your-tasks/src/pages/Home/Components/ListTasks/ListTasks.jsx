@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import styles from './listTasks.module.css'
 import List from "./List";
+
 
 export default function ListTasks() {
     const [listTasks, setListTasks] = useState([])
@@ -10,8 +12,8 @@ export default function ListTasks() {
     }, [])
 
     return(
-        <>
+        <div className={styles.listTasks}>
             {listTasks.map(list => <List key={list.id} list={list}/>)}
-        </>
+        </div>
     );
 }
