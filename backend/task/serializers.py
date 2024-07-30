@@ -9,7 +9,7 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
         
         
 class ListSerializer(serializers.HyperlinkedModelSerializer):
-    task_set = TaskSerializer(many=True)
+    task_set = TaskSerializer(many=True, read_only=True)
     
     class Meta:
         model = List

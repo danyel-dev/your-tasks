@@ -15,11 +15,13 @@ export default function CreateNewListComponent() {
     function handleSubmitForm(e) {
         e.preventDefault()
 
-        axios.post("http://127.0.0.1:8000/lists/", {
-            user: "http://127.0.0.1:8000/users/2/",
-            title: title,
-            description: description
-        }).then(response => console.log(response.data))
+        if(title) {
+            axios.post("http://127.0.0.1:8000/lists/", {
+                user: "http://127.0.0.1:8000/users/2/",
+                title: title,
+                description: description
+            }).then(response => console.log(response.data))
+        }
         
         setTitle("")
         setDescription("")
