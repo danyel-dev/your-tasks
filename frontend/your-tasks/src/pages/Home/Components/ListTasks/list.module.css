@@ -1,11 +1,18 @@
 .list {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
     padding: 10px;
     height: max-content;
     align-items: center;
     border-radius: 10px;
     justify-content: center;
     background-color: rgba(0, 0, 255, 0.3);
+}
+
+.footerList form input {
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.8);
+    border: 0;
 }
