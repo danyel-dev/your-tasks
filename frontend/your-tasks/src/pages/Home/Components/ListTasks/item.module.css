@@ -1,0 +1,18 @@
+.listItem {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.listItemTitle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#listItemIconOptions {
+    color: rgba(0, 0, 0, 0.7);
+}

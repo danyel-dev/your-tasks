@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './list.module.css'
 import axios from 'axios';
+import Item from './Item';
 
 
 export default function List({ list }) {
@@ -23,17 +24,17 @@ export default function List({ list }) {
     }
 
     return(
-        <div className={styles.list}>
+        <div className={styles.listContainer}>
             <h3>{list.title}</h3>
 
-            <div>
-                {list.task_set.map(task => <p key={task.id}>{task.title}</p>)}
-            </div>
+            <ul className={styles.list}>
+                {list.task_set.map(task => <Item key={task.item} task={task} />)}
+            </ul>
 
             <footer className={styles.footerList}>
                 <form onSubmit={submitFormTaskAddition}>
                     <input type="text"
-                    placeholder='adicionar nova tarefa' 
+                    placeholder='Adicionar nova tarefa' 
                     value={taskName}
                     onChange={handleChangeTaskName}
                     />
