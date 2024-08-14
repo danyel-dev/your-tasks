@@ -1,9 +1,8 @@
 .listContainer {
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    padding: 10px 20px;
-    width: max-content;
+    gap: 1em;
+    padding: 10px 15px;
     height: max-content;
     /* align-items: center; */
     border-radius: 10px;
@@ -11,10 +10,17 @@
     background-color: rgba(0, 0, 255, 0.3);
 }
 
+.listHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: justify;
+}
+
 .footerList form input {
     padding: 7px 12px;  
-    width: 250px;
-    border-radius: 2px;
+    width: 100%;
+    border-radius: 5px;
     color: rgba(0, 0, 0, 0.8);
     border: 0;
 }
@@ -24,4 +30,9 @@
     width: 100%;
     flex-direction: column;
     gap: 20px;
+    background-color: rgba(0, 0, 255, 0.3);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    padding: 10px;
 }

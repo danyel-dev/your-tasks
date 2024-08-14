@@ -25,11 +25,19 @@ export default function List({ list }) {
 
     return(
         <div className={styles.listContainer}>
-            <h3>{list.title}</h3>
+            <header className={styles.listHeader}>
+                <h3>{list.title}</h3>
+                
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cupiditate quas excepturi vitae perspiciatis necessitatibus placeat, labore mollitia.</small>
+            </header>
 
-            <ul className={styles.list}>
-                {list.task_set.map(task => <Item key={task.item} task={task} />)}
-            </ul>
+            {list.task_set.length !== 0?
+                <ul className={styles.list}>
+                    {list.task_set.map(task => <Item key={task.item} task={task} />)}
+                </ul>
+            : 
+                ""    
+            }
 
             <footer className={styles.footerList}>
                 <form onSubmit={submitFormTaskAddition}>

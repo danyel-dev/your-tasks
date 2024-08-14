@@ -17,7 +17,7 @@ export default function CreateNewListComponent() {
 
         if(title) {
             axios.post("http://127.0.0.1:8000/lists/", {
-                user: "http://127.0.0.1:8000/users/2/",
+                user: "http://127.0.0.1:8000/users/7/",
                 title: title,
                 description: description
             }).then(response => console.log(response.data))
