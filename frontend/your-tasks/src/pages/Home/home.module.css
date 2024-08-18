@@ -1,5 +1,11 @@
 .container {
     display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.container button {
+    width: max-content;
 }
 
 .aside {
@@ -12,7 +18,21 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    gap: 2em;
     margin: 50px 80px;
+    position: relative;
 }
 
+.modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}

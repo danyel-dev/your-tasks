@@ -4,13 +4,8 @@ import axios from 'axios';
 
 
 export default function CreateNewListComponent() {
-    const [showListCreationForm, setShowListCreationForm] = useState(false)
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-
-    function handleChangeListCreationForm() {
-        setShowListCreationForm(!showListCreationForm)
-    }
 
     function handleSubmitForm(e) {
         e.preventDefault()
@@ -37,27 +32,22 @@ export default function CreateNewListComponent() {
 
     return(
         <div className={styles.createListContainer}>
-            <button className={styles.createListButton} onClick={handleChangeListCreationForm}>Nova Lista de Tarefas</button>
+            <form className={styles.ListCreationForm}>
+                <div className={styles.formField}>
+                    <label htmlFor="title" className={styles.formFieldLabel}>Titulo</label>
+                    <input type="text" value={title} onChange={handleChangeTitleField} id='title' />
+                </div>
 
-            {showListCreationForm? 
-                <form className={styles.ListCreationForm}>
-                    <div className={styles.formField}>
-                        <label htmlFor="title" className={styles.formFieldLabel}>Titulo</label>
-                        <input type="text" value={title} onChange={handleChangeTitleField} id='title' />
-                    </div>
+                <div className={styles.formField}>
+                    <label htmlFor="description" className={styles.formFieldLabel}>
+                        Descrição <small className={styles.smallOptional}>(Opcional)</small>
+                    </label>
 
-                    <div className={styles.formField}>
-                        <label htmlFor="description" className={styles.formFieldLabel}>
-                            Descrição <small className={styles.smallOptional}>(Opcional)</small>
-                        </label>
+                    <textarea name='description' cols="30" rows="5" id='description' value={description} onChange={handleChangeDescriptionField}></textarea>
+                </div>
 
-                        <textarea name='description' cols="30" rows="5" id='description' value={description} onChange={handleChangeDescriptionField}></textarea>
-                    </div>
-
-                    <button className={styles.buttonSubmitForm} onClick={handleSubmitForm}>Criar Lista</button>
-                </form>
-            : ""
-            }
+                <button className={styles.buttonSubmitForm} onClick={handleSubmitForm}>Criar Lista</button>
+            </form>
         </div>
     );
 }
