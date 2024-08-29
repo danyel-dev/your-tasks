@@ -28,12 +28,15 @@ export default function Home() {
                 ""    
             }
 
-            <aside className={styles.aside}></aside>
+            <aside className={styles.aside}>
+                
+            </aside>
 
             <main className={styles.main}>
                 <button onClick={() => {setOpenModal(true)}}>Clique aqui</button>
+               
 
-                <ListTasks />
+                <ListTasks /> 
             </main>
         </div>
     );

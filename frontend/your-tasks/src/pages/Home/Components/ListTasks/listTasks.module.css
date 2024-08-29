@@ -2,6 +2,18 @@
     /* background-color: blue; */
     justify-content: center;
     display: grid;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
+}
+
+@media(max-width: 1000px) {
+    .listTasks {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 650px) {
+    .listTasks {
+        grid-template-columns: 1fr;
+    }
 }

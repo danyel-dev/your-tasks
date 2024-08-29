@@ -12,7 +12,7 @@ class List(models.Model):
 
     def __str__(self):
         return self.title
-    
+
     
 class Task(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)    
